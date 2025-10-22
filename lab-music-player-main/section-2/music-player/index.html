@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body data-theme="light">
+    <div class="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="circle-icon"></div>
+                    <span class="logo-text">Circle</span>
+                </div>
+
+                <!-- Menu -->
+                <nav class="menu">
+                    <a href="#" class="menu-item active">
+                        <i class="fa-solid fa-house icon"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                        <span>Search</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-list icon"></i>
+                        <span>Playlists</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-regular fa-bell icon"></i>
+                        <span>Notifications</span>
+                        <span class="dot"></span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-gem icon"></i>
+                        <span>Premium Content</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Bottom -->
+            <div class="sidebar-bottom">
+                <a href="#" class="download-link">
+                    <i class="fa-solid fa-download"></i> Download Desktop App
+                </a>
+                <div class="user-card">
+                    <img src="https://i.pravatar.cc/40" alt="User Avatar" class="avatar" />
+                    <span class="username">Jonathon Trott</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- 1. Category Tabs -->
+            <div class="categories">
+                <button class="active">Music</button>
+                <button>Podcasts</button>
+                <button>Jazz</button>
+                <button>Electronic</button>
+                <button>Rock Classic</button>
+                <button>Hip Hop</button>
+            </div>
+
+            <!-- 2. Popular Albums -->
+            <section class="popular-albums">
+                <h2>Popular Albums</h2>
+                <div class="album-list">
+                    <div class="album-card">
+                        <img src="https://placehold.co/200x150?text=C" alt="Album 1">
+                        <h3>Ephemeral Dreams</h3>
+                        <p>Sarah Melody</p>
+                        <div class="meta">
+                            <span>12 Tracks</span> • <span>31K Likes</span>
+                        </div>
+                        <div class="album-actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <button><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="album-card">
+                        <img src="https://placehold.co/200x150?text=C" alt="Album 2">
+                        <h3>Ephemeral Dreams</h3>
+                        <p>Sarah Melody</p>
+                        <div class="meta">
+                            <span>12 Tracks</span> • <span>31K Likes</span>
+                        </div>
+                        <div class="album-actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <button><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="album-card">
+                        <img src="https://placehold.co/200x150?text=C" alt="Album 3">
+                        <h3>Ephemeral Dreams</h3>
+                        <p>Sarah Melody</p>
+                        <div class="meta">
+                            <span>12 Tracks</span> • <span>31K Likes</span>
+                        </div>
+                        <div class="album-actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <button><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Picked for you -->
+            <section class="picked">
+                <h2>Picked for you</h2>
+                <div class="picked-list">
+                    <div class="picked-card">
+                        <img src="https://placehold.co/200x150?text=C" alt="Playlist">
+                        <div class="picked-info">
+                            <span class="label">PLAYLIST</span>
+                            <h3>New Music Friday Pakistan</h3>
+                            <p>Listen to the fresh new music from Pakistan and around the world.</p>
+
+                            <div class="meta">
+                                <span>03:21:23</span>
+                                <span>1.3M Likes</span>
+                                <span>32 Tracks</span>
+                            </div>
+
+                            <div class="tags">
+                                <span>Podcasts</span>
+                                <span>Audio Books</span>
+                                <span>Classic Fusion</span>
+                            </div>
+
+                            <div class="actions">
+                                <div class="action-left">
+                                    <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+                                    <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+                                </div>
+                                <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Recent -->
+            <section class="recent">
+                <h2>Recent</h2>
+
+                <div class="recent-list">
+                    <div class="recent-item">
+                        <span class="index">1</span>
+                        <img src="https://placehold.co/100x100?text=C" alt="Eternal Echoes">
+                        <div class="song-info">
+                            <h4>Eternal Echoes</h4>
+                            <p>Sarah Melody</p>
+                        </div>
+                        <div>
+                            <h4>Serenity Symphony</h4>
+                            <span class="year">2022</span>
+                        </div>
+                        <span class="time">04:32</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <div class="recent-item">
+                        <span class="index">2</span>
+                        <img src="https://placehold.co/100x100?text=C" alt="Rhythmic Echoes">
+                        <div class="song-info">
+                            <h4>Rhythmic Echoes</h4>
+                            <p>Alex Harmon</p>
+                        </div>
+                        <div>
+                            <h4>Serenity Symphony</h4>
+                            <span class="year">2022</span>
+                        </div>
+                        <span class="time">03:12</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="rightbar">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for something">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <!-- Popular Artists -->
+            <section class="popular-artists">
+                <h3>Popular Artists</h3>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=1" alt="Sarah Melody">
+                        <span class="artist-name">Sarah Melody</span>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=2" alt="Javier Cruz">
+                        <span class="artist-name">Javier Cruz</span>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=3" alt="Maya Kapoor">
+                        <span class="artist-name">Maya Kapoor</span>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=4" alt="André Williams">
+                        <span class="artist-name">André Williams</span>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=5" alt="Alicia Harmon">
+                        <span class="artist-name">Alicia Harmon</span>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://i.pravatar.cc/80?img=6" alt="Carlos Rodriguez">
+                        <span class="artist-name">Carlos Rodriguez</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top Podcasts -->
+            <section class="top-podcasts">
+                <h3>Top Podcasts</h3>
+                <div class="podcasts-list">
+                    <div class="podcast-card">
+                        <img src="https://placehold.co/100x100?text=P1" alt="Podcast 1">
+                        <h4>Mindful Musings</h4>
+                    </div>
+                    <div class="podcast-card">
+                        <img src="https://placehold.co/100x100?text=P2" alt="Podcast 2">
+                        <h4>The Creative</h4>
+                    </div>
+                    <div class="podcast-card">
+                        <img src="https://placehold.co/100x100?text=P3" alt="Podcast 3">
+                        <h4>Tech Talk Daily</h4>
+                    </div>
+                    <div class="podcast-card">
+                        <img src="https://placehold.co/100x100?text=P4" alt="Podcast 4">
+                        <h4>Story Time</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next in Queue -->
+            <section class="next-queue">
+                <h3>Next in Queue</h3>
+                <div class="queue-list">
+                    <div class="queue-item">
+                        <img src="https://placehold.co/50x50?text=Q1" alt="Queue 1">
+                        <div class="song-info">
+                            <h4>Eternal Echoes</h4>
+                            <p>Sarah Melody</p>
+                        </div>
+                        <span class="time">04:32</span>
+                        <i class="fa-solid fa-heart queue-heart active"></i>
+                    </div>
+                    <div class="queue-item">
+                        <img src="https://placehold.co/50x50?text=Q2" alt="Queue 2">
+                        <div class="song-info">
+                            <h4>Midnight Reverie</h4>
+                            <p>Javier Cruz</p>
+                        </div>
+                        <span class="time">04:32</span>
+                        <i class="fa-regular fa-heart queue-heart"></i>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <footer class="player-bar">
+            <!-- Current Song Info -->
+            <div class="current-song">
+                <img src="https://placehold.co/60x60?text=CS" alt="Current Song" class="song-cover">
+                <div class="song-details">
+                    <h4 class="song-title">Rhythmic Echoes</h4>
+                    <p class="song-artist">Alex Harmon</p>
+                </div>
+                <i class="fa-regular fa-heart song-heart"></i>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+                    <button class="control-btn">
+                        <i class="fa-solid fa-backward"></i>
+                    </button>
+                    <button class="play-pause-btn">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+                    <button class="control-btn">
+                        <i class="fa-solid fa-forward"></i>
+                    </button>
+                    <button class="control-btn">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                </div>
+
+                <div class="progress-section">
+                    <span class="current-time">03:19</span>
+                    <div class="progress-bar">
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                            <div class="progress-handle"></div>
+                        </div>
+                    </div>
+                    <span class="total-time">05:08</span>
+                </div>
+            </div>
+
+            <!-- Right Controls -->
+            <div class="right-controls">
+                <button class="control-btn">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+                <button class="control-btn">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <div class="volume-bar">
+                    <div class="volume-track">
+                        <div class="volume-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <button class="control-btn">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

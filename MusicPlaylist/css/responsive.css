@@ -1,0 +1,40 @@
+/* responsive.css — breakpoints & tweaks */
+
+
+/* <= 1200px — medium */
+@media (max-width: 1200px) {
+  .app { padding:16px; gap:16px; grid-template-columns: 200px 1fr 300px; }
+  .album-card { width: 260px; }
+  .picked-card img { width:140px; height:110px; }
+}
+
+/* <= 992px — tablet */
+@media (max-width: 992px) {
+  .app { grid-template-columns: 220px 1fr; grid-template-rows: auto 1fr auto; }
+  .rightbar { grid-column: 1 / -1; order:3; }
+  .player-bar { grid-column: 1 / -1; }
+  .sidebar { grid-row: auto; max-height:none; }
+  .album-list { justify-content:flex-start; }
+}
+
+/* <= 768px — mobile landscape / small tablets */
+@media (max-width: 768px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto auto; padding:12px; gap:12px; }
+  .sidebar { display:flex; flex-direction:row; align-items:center; gap:12px; padding:12px; border-radius:12px; }
+  .menu { display:none; } /* hide full menu on very small screens */
+  .album-card { width: 100%; }
+  .picked-card { flex-direction:column; align-items:flex-start; gap:12px; }
+  .recent-item { grid-template-columns: 30px 52px 1fr 100px 60px 30px; padding:8px; }
+  .player-bar { flex-direction:column; gap:12px; padding:12px; align-items:stretch; }
+  .right-controls { justify-content:flex-start; }
+  .volume-bar { display:none; }
+}
+
+/* <= 480px — mobile portrait */
+@media (max-width: 480px) {
+  .album-card { padding:10px; border-radius:10px; }
+  .recent-item { grid-template-columns: 26px 44px 1fr 90px 56px 28px; gap:8px; }
+  .song-title { font-size:0.92rem; }
+  .categories { gap:8px; }
+  .logo-text { font-size:18px; }
+}

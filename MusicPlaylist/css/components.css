@@ -1,0 +1,610 @@
+/* components.css — Final Fixed (matched update code) */
+
+/* ===================== Categories ===================== */
+.categories {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.categories button {
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+.categories button.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ===================== Popular Albums ===================== */
+.album-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.album-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--color-card);
+  overflow: hidden;
+  transition: transform var(--transition-fast);
+}
+.album-card:hover {
+  transform: translateY(-6px);
+}
+.album-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.album-card h3 {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.album-card p {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+.album-card .meta {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: auto;
+}
+
+/* --- FIXED: Heart + Play vertical alignment --- */
+.album-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.album-actions i.fa-heart {
+  font-size: 1rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.album-actions i.fa-heart:hover,
+.album-actions i.fa-heart.active {
+  color: var(--color-primary);
+}
+.album-actions button {
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.album-actions button:hover {
+  transform: scale(1.1);
+}
+
+/* ===================== Picked For You ===================== */
+.picked-list {
+  margin-top: 12px;
+}
+.picked-card {
+  display: flex;
+  background: linear-gradient(90deg, rgba(59,91,219,0.96), rgba(41,56,128,0.95));
+  color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+.picked-card:hover {
+  transform: translateY(-3px);
+}
+.picked-card img {
+  flex-shrink: 0;
+  align-self: center;
+  margin: auto 0;         
+  display: block;
+  object-fit: cover;
+  width: 220px;
+  height: 220px;
+}
+
+.picked-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.picked-info .label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.picked-info h3 {
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+.picked-info p {
+  font-size: 0.9rem;
+  margin: 8px 0;
+  opacity: 0.9;
+}
+.picked-info .tags span {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+.picked-info .actions {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actions .action-left {
+  display: flex;
+  gap: 10px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+.icon-btn:hover {
+  opacity: 0.8;
+}
+.play-btn {
+  background: #fff;
+  color: var(--color-primary);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===================== Recent List ===================== */
+.recent-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recent-item {
+  display: grid;
+  grid-template-columns: 28px 60px 1fr 140px 70px 28px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--color-card);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.recent-item:hover {
+  background: rgba(255,255,255,0.02);
+  transform: translateY(-2px);
+}
+.recent-item img {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.recent-item .song-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.recent-item i.fa-heart {
+  justify-self: end;
+  font-size: 1rem;
+  color: var(--color-muted);
+  transition: color 0.25s ease;
+}
+.recent-item i.fa-heart:hover {
+  color: var(--color-primary);
+}
+
+/* ===================== Rightbar (Artists, Podcasts, Queue) ===================== */
+.search-bar {
+  position: relative;
+  margin-bottom: 10px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 12px 44px 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  background: var(--color-card);
+  color: var(--color-text);
+  outline: none;
+  font-size: 14px;
+}
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+}
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.artist-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.podcasts-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-top: 8px;
+}
+.podcast-card {
+  flex: 0 0 auto;
+  width: 100px;
+  text-align: center;
+}
+.podcast-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* --- Queue (centered align) --- */
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.queue-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-card);
+  border-radius: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+.queue-item.active {
+  background: rgba(59,91,219,0.12);
+  border-color: rgba(59,91,219,0.25);
+}
+.queue-item .song-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.queue-item .time {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+.queue-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-muted);
+  transition: color 0.25s ease;
+}
+.queue-heart:hover,
+.queue-heart.active {
+  color: var(--color-primary);
+}
+
+/* ===================== Player Bar ===================== */
+.player-bar {
+  background: linear-gradient(135deg, rgba(59,91,219,1), rgba(41,56,128,1));
+  padding: 16px 25px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  color: #fff;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.current-song {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 260px;
+}
+.song-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.song-heart {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.song-heart:hover {
+  color: var(--color-primary);
+}
+
+/* Controls */
+.player-controls {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.control-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.control-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.play-pause-btn {
+  background: rgba(255,255,255,0.25);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.play-pause-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.35);
+}
+
+/* Progress bar */
+.progress-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+.progress-bar {
+  flex: 1;
+  cursor: pointer;
+}
+.progress-track {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: width 0.1s ease;
+}
+.progress-handle {
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.progress-track:hover .progress-handle {
+  opacity: 1;
+}
+
+/* Right-side controls */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+  justify-content: flex-end;
+}
+.volume-bar {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+.volume-track {
+  position: relative;
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  flex: 1;
+}
+.volume-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ===================== Rightbar Smooth Transitions (Matched Update Code) ===================== */
+
+/* Artists hover effect */
+.artist-card img {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.artist-card:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+.artist-card span {
+  transition: color var(--transition-fast);
+}
+.artist-card:hover span {
+  color: var(--color-primary);
+}
+
+/* Podcasts hover effect */
+.podcast-card img {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.podcast-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.podcast-card span {
+  transition: color var(--transition-fast);
+}
+.podcast-card:hover span {
+  color: var(--color-primary);
+}
+
+/* Queue hover + smooth transform */
+.queue-item {
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.queue-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Heart transition in queue */
+.queue-heart {
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.queue-heart:hover,
+.queue-heart.active {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Subtle fade-in for queue info text */
+.queue-item .song-info,
+.queue-item .time {
+  transition: color var(--transition-fast);
+}
+.queue-item:hover .song-info h4,
+.queue-item:hover .time {
+  color: var(--color-text);
+}
+
+
+
+/* ===================== Animations ===================== */
+
+/* Fade in up animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse effect for active hearts */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Slide up for player bar on load */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations */
+.album-card,
+.picked-card,
+.recent-item,
+.queue-item {
+  animation: fadeInUp 0.6s ease both;
+}
+
+.player-bar {
+  animation: slideUp 0.8s ease both;
+}
+
+/* Active heart animation */
+i.fa-heart.active {
+  animation: pulse 0.9s ease-in-out infinite;
+}
+

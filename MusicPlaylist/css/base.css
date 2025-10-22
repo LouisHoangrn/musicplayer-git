@@ -1,0 +1,40 @@
+/* base.css — variables + reset (dark-first) */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --font-main: "Inter", Arial, sans-serif;
+
+  /* Dark theme variables (default) */
+  --bg-gradient: linear-gradient(135deg,#0f1419,#1a2332);
+  --color-bg: var(--bg-gradient);
+  --color-text: #eef2ff;
+  --color-card: rgba(255,255,255,0.03);
+  --color-primary: #3b5bdb;
+  --color-border: rgba(255,255,255,0.05);
+  --color-muted: rgba(238,242,255,0.68);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --transition-fast: 0.18s ease-in-out;
+}
+
+/* light theme overrides (if body[data-theme="light"]) */
+body[data-theme="light"] {
+  --color-bg: linear-gradient(180deg,#f6f7fb,#eef2f8);
+  --color-text: #071227;
+  --color-card: #fff;
+  --color-border: #e6e9ef;
+  --color-muted: rgba(7,18,39,0.6);
+}
+
+/* base layout */
+html,body{ height:100%; font-family:var(--font-main); color:var(--color-text); background:var(--color-bg); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+/* small helpers */
+.hidden { display:none !important; }
+.clickable { cursor:pointer; }
+
+/* scrollbar hide consistent */
+.sidebar, .rightbar, .main-content { overflow-y:auto; scrollbar-width: none; -ms-overflow-style: none; }
+.sidebar::-webkit-scrollbar, .rightbar::-webkit-scrollbar, .main-content::-webkit-scrollbar { display:none; }

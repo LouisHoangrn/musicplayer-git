@@ -1,0 +1,63 @@
+/* layout.css — grid & containers */
+.app{
+  display: grid;
+  grid-template-columns: 250px 1fr 320px;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* SIDEBAR */
+.sidebar{
+  grid-row: 1 / span 2;
+  padding: 20px;
+  background: var(--color-card);
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-width: 220px;
+  max-height: 100%;
+}
+
+/* LOGO */
+.logo { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+.circle-icon{ width:40px; height:40px; border:8px solid var(--color-text); border-top-color:transparent; border-radius:50%; transform:rotate(45deg); opacity:0.75; }
+.logo-text{ font-weight:600; font-size:20px; color:var(--color-text); }
+
+/* MENU */
+.menu{ display:flex; flex-direction:column; gap:8px; }
+.menu-item{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--color-text); padding:8px 10px; border-radius:10px; transition: background var(--transition-fast), color var(--transition-fast); }
+.menu-item:hover{ background: rgba(255,255,255,0.02); color:var(--color-primary); }
+.menu-item.active{ background: rgba(255,255,255,0.03); color:var(--color-primary); font-weight:600; }
+
+/* SIDEBAR BOTTOM */
+.sidebar-bottom { display:flex; flex-direction:column; gap:12px; align-items:center; }
+.download-link { color:var(--color-primary); text-decoration:none; font-size:13px; }
+.user-card{ display:flex; align-items:center; justify-content:space-between; background:transparent; border-radius:12px; padding:8px; width:100%; }
+
+/* MAIN & RIGHTBAR */
+.main-content{ padding:20px; overflow-y:auto; }
+.rightbar{ padding:20px; border-radius:20px; background:transparent; border:1px solid var(--color-border); max-height:100%; overflow-y:auto; }
+
+/* PLAYER BAR footer spans columns 2 & 3 */
+.player-bar{
+  grid-column: 2 / span 2;
+  background: linear-gradient(135deg, rgba(59,91,219,0.95) 0%, rgba(41,56,128,0.95) 100%);
+  padding: 14px 22px;
+  border-radius: 12px;
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* small responsive container cap */
+.container { max-width: 1400px; margin:0 auto; }
