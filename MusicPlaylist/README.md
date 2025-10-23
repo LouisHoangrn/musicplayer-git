@@ -1,4 +1,4 @@
-# 🎧 Circle Music Player UI
+# 🎧 Circle Music Player
 
 > **Exercise 2** – Course: **Web Application Analysis and Development**  
 > **Task:** Apply the following techniques to enhance your user interface:  
