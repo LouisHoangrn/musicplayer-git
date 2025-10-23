@@ -5,8 +5,8 @@
 > - Responsive UI Design  
 > - Transitions  
 > - Animations  
-> **Developed by:** Nguyen Vu Hoang Long 
-> **ID Student:** 23090026
+**Developed by:** Nguyen Vu Hoang Long 
+**ID Student:** 23090026
 ---
 
 ##  Overview
