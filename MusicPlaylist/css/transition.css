@@ -1,0 +1,245 @@
+/* Transition , hover, focus, and active state styles */
+
+/* ========== GLOBAL TRANSITIONS ========== */
+html, body, .app,
+.sidebar, .main-content, .rightbar, .player-bar,
+.album-card, .picked-card, .recent-item, .queue-item,
+button, input, a {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+}
+
+/* ============================================================
+   HOVER STATES
+============================================================ */
+
+/* Sidebar menu */
+.menu-item:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--color-primary);
+}
+
+/* Category buttons */
+.categories button:hover {
+  background: rgba(59,91,219,0.15);
+  transform: translateY(-1px);
+}
+
+/* Album, Picked, Recent, Queue cards */
+.album-card:hover,
+.picked-card:hover,
+.recent-item:hover,
+.queue-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* Buttons & icon buttons */
+button:hover,
+.icon-btn:hover,
+.control-btn:hover,
+.play-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Heart icons */
+.album-actions i.fa-heart:hover,
+.album-actions i.fa-heart.active,
+.recent-item i.fa-heart:hover,
+.queue-heart:hover,
+.queue-heart.active,
+.song-heart:hover {
+  color: var(--color-primary);
+}
+
+/* Artist & podcast hover effects */
+.artist-card:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+.artist-card:hover span,
+.podcast-card:hover span {
+  color: var(--color-primary);
+}
+.podcast-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.podcast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Player controls */
+.control-btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+.play-pause-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Volume bar */
+.volume-bar:hover .volume-fill {
+  background: var(--color-primary);
+}
+
+/* Theme toggle */
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* Custom scrollbar for WebKit browsers */
+.podcasts-list::-webkit-scrollbar {
+  height: 8px;
+}
+.podcasts-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+}
+.podcasts-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* User card in sidebar bottom */
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+  background: rgba(255,255,255,0.04);
+}
+.user-card:hover .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ============================================================
+   FOCUS STATES
+============================================================ */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid rgba(59,91,219,0.22);
+  outline-offset: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ACTIVE STATES
+============================================================ */
+.menu-item:active,
+button:active,
+.icon-btn:active,
+.control-btn:active,
+.play-btn:active,
+.artist-card:active,
+.podcast-card:active,
+.queue-item:active {
+  transform: scale(0.95);
+}
+
+.queue-item.active {
+  background: rgba(59,91,219,0.12);
+  border-color: rgba(59,91,219,0.25);
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Apply animations */
+.app {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease both;
+}
+.player-bar {
+  animation: slideUp 0.7s ease both;
+}
+i.fa-heart.active {
+  animation: pulse 0.9s ease-in-out infinite;
+}
+
+/* ============================================================
+   THEME TOGGLE — TRANSITION & MOTION FIXED
+============================================================ */
+.theme-toggle {
+  position: relative;
+  width: 56px;
+  height: 28px;
+  border-radius: 20px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+/* Icon transition */
+.theme-toggle .light-icon,
+.theme-toggle .dark-icon {
+  font-size: 14px;
+  color: var(--color-muted);
+  z-index: 2;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+/* Track circle */
+.theme-toggle .toggle-track {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  transition: left 0.3s ease, background-color 0.25s ease;
+  z-index: 1;
+}
+
+/* Light mode checked state (PURE CSS) */
+#themeSwitch:checked + .app .theme-toggle .toggle-track {
+  left: 29px;
+}
+#themeSwitch:checked + .app .theme-toggle .light-icon {
+  color: var(--color-primary);
+}
+#themeSwitch:checked + .app .theme-toggle .dark-icon {
+  opacity: 0.6;
+}
+
+/* ============================================================
+   ELEVATION SHADOW (Dark vs Light)
+============================================================ */
+body[data-theme="dark"] .album-card {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+#themeSwitch:checked + .app .album-card {
+  box-shadow: 0 4px 10px rgba(16,24,40,0.06);
+}

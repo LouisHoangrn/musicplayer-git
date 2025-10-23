@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/transition.css">
   <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Font Awesome -->
@@ -17,6 +18,8 @@
 </head>
 
 <body data-theme="dark">
+  <input type="checkbox" id="themeSwitch" hidden>
+
   <div class="app">
     <!-- ==================== SIDEBAR ==================== -->
     <aside class="sidebar">
@@ -25,6 +28,13 @@
           <div class="circle-icon"></div>
           <span class="logo-text">Circle</span>
         </div>
+
+        <!-- THEME TOGGLE SWITCH -->
+        <label for="themeSwitch" class="theme-toggle">
+          <span class="light-icon"><i class="fa-regular fa-sun"></i></span>
+          <span class="dark-icon"><i class="fa-regular fa-moon"></i></span>
+          <span class="toggle-track"></span>
+        </label>
 
         <nav class="menu">
           <a href="#" class="menu-item active"><i class="fa-solid fa-house icon"></i><span>Home</span></a>
@@ -157,7 +167,6 @@
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
       </div>
 
-      <!-- Popular Artists -->
       <section class="popular-artists">
         <h3>Popular Artists</h3>
         <div class="artists-grid">
@@ -170,7 +179,6 @@
         </div>
       </section>
 
-      <!-- Top Podcasts -->
       <section class="top-podcasts">
         <h3>Top Podcasts</h3>
         <div class="podcasts-list">
@@ -181,7 +189,6 @@
         </div>
       </section>
 
-      <!-- Queue -->
       <section class="next-queue">
         <h3>Next in Queue</h3>
         <div class="queue-list">
