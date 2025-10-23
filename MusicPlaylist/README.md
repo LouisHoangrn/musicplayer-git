@@ -5,8 +5,9 @@
 > - Responsive UI Design  
 > - Transitions  
 > - Animations  
-**Developed by:** Nguyen Vu Hoang Long 
-**ID Student:** 23090026
+>
+> **Author:** Nguyễn Hoàng Long (Louis Hoang) • **ID Student:** 23090026 • Software Engineering, 2025  
+> 📧 [louishoang205rn@gmail.com](mailto:louishoang205rn@gmail.com) | 🌐 [github.com/LouisHoangrn](https://github.com/LouisHoangrn)
 ---
 
 ##  Overview
