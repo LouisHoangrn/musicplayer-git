@@ -63,7 +63,3 @@ The interface is divided into four main sections:
 | **Main Content**       | Albums, Playlist, Recent       | CSS Grid                 |
 | **Right Sidebar**      | Search, Artist, Podcast, Queue | Flexbox / Grid           |
 | **Footer (Player)**    | Fixed music player bar         | Flexbox + Fixed Position |
-
-
-
-### Already Changes
