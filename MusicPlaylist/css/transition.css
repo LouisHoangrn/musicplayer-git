@@ -243,3 +243,8 @@ body[data-theme="dark"] .album-card {
 #themeSwitch:checked + .app .album-card {
   box-shadow: 0 4px 10px rgba(16,24,40,0.06);
 }
+body[data-theme="dark"] .picked-card,
+body[data-theme="dark"] .recent-item,
+body[data-theme="dark"] .queue-item {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
